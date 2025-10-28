@@ -1,0 +1,236 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #fff;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 50px 0 40px;
+  text-align: left;
+  padding-left: 40px;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 100px;
+  box-sizing: border-box;
+}
+
+.tile {
+  border: 1px solid #ddd;
+  background: #fff;
+  aspect-ratio: 1 / 1;
+  width: 290px;             
+  height: 290px;         
+  display: flex;
+  align-items: center;     
+  justify-content: center; 
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;            
+  align-items: center;      
+  justify-content: center; 
+  width: 100%;
+  height: 100%;
+}
+
+.logo img {
+  max-width: 45%;         
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  justify-content: start;    
+  margin-left: -120px;        
+  padding-top: 20px;
+  width: fit-content;         
+}
+
+.logo:hover img,
+.logo:focus img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.25));
+}
+
+.tiles .tile:nth-child(5) .logo img, 
+.tiles .tile:nth-child(7) .logo img, 
+.tiles .tile:nth-child(9) .logo img { 
+  width: 65%;
+}
+
+
+@media (max-width: 1100px) {
+  .tiles { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 820px) {
+  .tiles { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .tiles { grid-template-columns: 1fr; }
+}
+
+
+
+.tiles .tile:nth-child(2) .logo {
+  position: relative;
+}
+
+.tiles .tile:nth-child(2) .logo img {
+  transition: opacity 0.3s ease-in-out;
+  position: relative;
+  z-index: 1; 
+}
+
+.tiles .tile:nth-child(2) .logo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/lyft-logo-pink.png");
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.tiles .tile:nth-child(2) .logo:hover::after {
+  opacity: 1;
+}
+
+.tiles .tile:nth-child(2) .logo:hover img {
+  opacity: 0;
+}
+
+.tiles .tile:nth-child(3) .logo img {
+  transition: transform 0.25s ease-out;
+}
+
+.tiles .tile:nth-child(3) .logo:hover img {
+  transform: translateY(-28px);
+}
+
+
+
+.tiles .tile:nth-child(4) .logo img {
+  transition: transform 0.3s ease, filter 0.4s ease;
+}
+
+.tiles .tile:nth-child(4) .logo:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(255, 102, 204, 0.6))
+          drop-shadow(0 0 40px rgba(255, 204, 102, 0.4));
+}
+
+
+
+.tiles .tile:nth-child(5) .logo img {
+  transition: transform 0.4s ease;
+}
+
+.tiles .tile:nth-child(5) .logo:hover img {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+
+
+@keyframes oldNavyPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.12);
+    filter: brightness(1.3);
+  }
+}
+
+.tiles .tile:nth-child(6) .logo img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.tiles .tile:nth-child(6) .logo:hover img {
+  animation: oldNavyPulse 0.8s ease-in-out infinite;
+}
+
+
+.tiles .tile:nth-child(8) .logo img {
+  transition: transform 0.8s ease, filter 0.4s ease;
+}
+
+.tiles .tile:nth-child(8) .logo:hover img {
+  transform: rotate(360deg) scale(1.05);
+  filter: drop-shadow(0 0 15px rgba(0, 100, 255, 0.6));
+}
+
+.tiles .tile:nth-child(9) .logo img {
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.tiles .tile:nth-child(9) .logo:hover img {
+  filter: blur(2px) brightness(1.3);
+  transform: scale(1.1);
+}
+
+.tiles .tile:nth-child(9) .logo:hover img {
+  filter: blur(2px) brightness(1.3) drop-shadow(0 0 10px rgba(255, 0, 0, 0.4));
+  transform: scale(1.1);
+}
+
+
+
+.tiles .tile:nth-child(10) .logo img {
+  transition: transform 0.6s ease, filter 0.6s ease;
+  transform-origin: center;
+}
+
+.tiles .tile:nth-child(10) .logo:hover img {
+  transform: scaleX(1.2);
+  filter: brightness(1.4) contrast(1.2);
+}
+
+
+
+.tiles .tile:nth-child(1) .logo {
+  position: relative;
+  overflow: hidden;
+}
+
+.tiles .tile:nth-child(1) .logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: left 0.8s ease;
+}
+
+.tiles .tile:nth-child(1) .logo:hover::after {
+  left: 120%;
+}
+
+.tiles .tile:nth-child(1) .logo img {
+  transition: transform 0.5s ease;
+}
+
+.tiles .tile:nth-child(1) .logo:hover img {
+  transform: scale(1.05);
+}
