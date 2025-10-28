@@ -1,0 +1,21 @@
+html {
+  color: black;
+  font-size: 13pt;
+}
+
+body {
+    margin: 10%;
+}
+
+.image-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.image-grid img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}

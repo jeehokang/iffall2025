@@ -1,0 +1,17 @@
+.lofi-title {
+    text-align: center;
+    font-weight: 700;
+    margin: 4rem 0 2rem;
+}
+
+.compressed-image {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto 24px;
+}
+
+.compressed-image img{
+    width: 100%;
+    height: auto;
+    display: block;
+}

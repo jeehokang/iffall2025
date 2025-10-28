@@ -1,0 +1,176 @@
+:root {
+    --wrap: 960px;
+    --pad: 1rem 4.5rem;
+    --shadow: 0 6px 24px rgba(0,0,0,0.18);
+}
+
+.page-intro {
+    background-image:
+    url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJzBdZP3Aw1oqIvC1nITrHg4s4KaQ050o3Ww&s);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 11rem 5rem;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: "Archivo Narrow", sans-serif;
+    color: #222;
+    font-optical-sizing: auto;
+    margin: 0;
+}
+
+header {
+    background-color: #e8e8e8;
+    text-align: center;
+    padding: 8rem 0;
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0.5rem 0 0;
+}
+
+.intro {
+    position: relative;
+    background-image: 
+    url(https://www.tieroom.com/media/catalog/product/v/e/velvet-dark-blue-9.jpg?width=810&height=810&store=american_11257000773&image-type=image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 1rem 0;
+    color: white;
+}
+
+.intro h3 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 2.5rem;
+}
+
+.intro .main-column {
+    width: var(--wrap);
+    margin: auto;
+    padding: 0 1rem 4.5rem;
+}
+
+.intro .main-column img {
+    float: right;
+    width: 440px;
+    height: auto;
+    margin: 10px 0 20px 40px;
+}
+
+.intro .main-column p{
+    width: auto;
+    line-height: 1.6;
+    font-size: 1.04rem;
+    line-height: 1.5;
+    margin-top: 0;
+    display: block;
+}
+
+.grid {
+    background: #e9ecf0;
+    padding: 2.5rem 0 8rem;
+}
+
+.grid h3 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin: 0 0 2.5rem;
+}
+
+.grid .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 980px;
+    margin: auto;
+    padding-top: 5px;
+    gap: 1.5rem;
+}
+
+.grid .box {
+    display: flex;
+    align-items: flex-start;
+}
+
+.grid .box img {
+    width: 230px;
+    height: 155px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.grid .box .text h4 {
+    margin: 0 0 0.35rem;;
+    font-size: 1.4rem;
+}
+
+.grid .box .text p {
+    margin-top: 6px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.closing {
+    background: lightblue;
+    color: #111;
+    text-align: center;
+    padding: 2rem 0 5.5rem;
+}
+
+.closing h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.closing .centered-text {
+    width: 50%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.closing .centered-text p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.footer {
+    background: white;
+    color: black;
+    text-align: left;
+    padding: 1.5rem 2rem;
+    font-size: 0.1.1rem;
+    font-weight: 600;
+
+    padding-left: 13rem;
+}
